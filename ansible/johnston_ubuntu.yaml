@@ -64,14 +64,14 @@
   - name: make directory
     command: mkdir -p /opt/oracle
 
-  - name: make python_scripts directory
-    command: mkdir python_scripts
+#  - name: make python_scripts directory
+#    command: mkdir python_scripts
 
-  - name: Allow Read/Write Access
-    command: sudo chmod 777 -R python_scripts
+#  - name: Allow Read/Write Access
+#    command: sudo chmod 777 -R python_scripts
 
-  - name: make directory
-    command: mkdir {{hostvars['localhost']['last_name']}}_ADB_Wallet
+#  - name: make directory
+#    command: mkdir {{hostvars['localhost']['last_name']}}_ADB_Wallet
 
   - name: make directory
     command: mkdir instantclient_dir
@@ -110,11 +110,11 @@
   - name: ldconfig
     command: ldconfig
 
-  - name: unzip wallet
-    unarchive:
-        src: /home/{{hostvars['localhost']['username']}}/Johnston_ADB_Wallet.zip
-        dest: /home/{{hostvars['localhost']['username']}}/Johnston_ADB_Wallet
-        remote_src: yes
+#  - name: unzip wallet
+#    unarchive:
+#        src: /home/{{hostvars['localhost']['username']}}/Johnston_ADB_Wallet.zip
+#        dest: /home/{{hostvars['localhost']['username']}}/Johnston_ADB_Wallet
+#        remote_src: yes
 
   - name: cp
     command: cp {{hostvars['localhost']['last_name']}}_ADB_Wallet/cwallet.sso /opt/oracle/instantclient/network/admin/
@@ -128,5 +128,5 @@
   - name: remove instantclient_dir
     command: sudo rm -R instantclient_dir
 
-  - name: remove legacy files
-    command: sudo rm -R /home/{{hostvars['localhost']['username']}}/{{hostvars['localhost']['last_name']}}_ADB_Wallet
+#  - name: remove legacy files
+#    command: sudo rm -R /home/{{hostvars['localhost']['username']}}/{{hostvars['localhost']['last_name']}}_ADB_Wallet
