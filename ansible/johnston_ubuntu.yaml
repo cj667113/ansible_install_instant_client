@@ -116,14 +116,14 @@
 #        dest: /home/{{hostvars['localhost']['username']}}/Johnston_ADB_Wallet
 #        remote_src: yes
 
-  - name: cp
-    command: cp {{hostvars['localhost']['last_name']}}_ADB_Wallet/cwallet.sso /opt/oracle/instantclient/network/admin/
+#  - name: cp
+#    command: cp {{hostvars['localhost']['last_name']}}_ADB_Wallet/cwallet.sso /opt/oracle/instantclient/network/admin/
 
-  - name: cp
-    command: sudo cp {{hostvars['localhost']['last_name']}}_ADB_Wallet/tnsnames.ora /opt/oracle/instantclient/network/admin/
+#  - name: cp
+#    command: sudo cp {{hostvars['localhost']['last_name']}}_ADB_Wallet/tnsnames.ora /opt/oracle/instantclient/network/admin/
 
-  - name: cp
-    command: cp {{hostvars['localhost']['last_name']}}_ADB_Wallet/sqlnet.ora /opt/oracle/instantclient/network/admin/
+#  - name: cp
+#    command: cp {{hostvars['localhost']['last_name']}}_ADB_Wallet/sqlnet.ora /opt/oracle/instantclient/network/admin/
 
   - name: remove instantclient_dir
     command: sudo rm -R instantclient_dir
