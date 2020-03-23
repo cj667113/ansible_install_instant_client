@@ -47,7 +47,7 @@
 
   - name: make directory
     command: mkdir -p /opt/oracle
-
+    
 #  - name: make directory
 #    command: mkdir {{hostvars['localhost']['last_name']}}_ADB_Wallet
 
